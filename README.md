@@ -1,18 +1,15 @@
-https://benjdd.com/languages/
+# Rubo Microbench
 
-# Languages
+A repo for building microbenchmarks to compare Ruby performance against different Ruby versions and interpreters.
 
-A repo for collaboratively building small benchmarks to compare languages.
-If you have a suggestion for improvement: PR!
-If you want to add a language: PR!
+This project is built off the excellent https://github.com/bddicken/languages, a repo for collaboratively building small benchmarks to compare languages.
 
 ## Running
 
 To run one of the benchmarks:
 
-1. `cd` into desired benchmark directory (EG `$ cd loops`)
-2. Compile by running `$ bash ../compile.sh`
-3. Run via `$ bash ../run.sh`.
+1. `cd` into desired benchmark directory (EG `$ cd loop_times`)
+2. Run via `$ bash ../run.sh`.
   You should see output something like:
   
   ```
@@ -27,11 +24,9 @@ To run one of the benchmarks:
   $
   ```
 
-4. For good measure, execute `$ bash ../clean.sh` when finished.
-
 ### Interpretation
 
-The numbers represent the real execution time (wall-clock time) it took for each language to execute the given task. **A lower number indicates better performance.**
+The numbers represent the real execution time (wall-clock time) it took for each ruby version to execute the given task. **A lower number indicates better performance.**
 
 `bash ../run.sh` runs each program three times using the `runOnce` function and `awk` captures the real execution time.
 
