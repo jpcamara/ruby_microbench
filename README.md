@@ -6,41 +6,58 @@ This project is built off the excellent https://github.com/bddicken/languages, a
 
 ## Running
 
-To run one of the benchmarks:
+At the moment, versions of Ruby are loaded and run by `rbenv`.
 
-1. `cd` into desired benchmark directory (EG `$ cd loop_times`)
-2. Run via `$ bash ../run.sh`.
+The benchmarks are run with the `run.sh` script. By default all benchmarks will run for all Ruby versions:
+
+1. Run via `$ bash ./run.sh`.
   You should see output something like:
   
   ```
-  $ bash ../run.sh
-  C = 0.77
-  Go = 2.07
-  Node = 0.79
-  Bun = 0.83
-  Deno = 1.13
-  PyPy = 1.61
-  Java = 0.64
-  $
+  $ bash ./run.sh
+  Running fibonacci...
+  ruby 3.4.0dev
+  ruby ./code.rb 40
+
+  Ruby 3.4 = 16.44s
+  Ruby 3.4 = 16.53s
+  Ruby 3.4 = 16.52s
+
+  ruby 3.4.0dev
+  ruby --yjit ./code.rb 40
+
+  Ruby 3.4 YJIT = 2.20s
+  Ruby 3.4 YJIT = 2.23s
+  Ruby 3.4 YJIT = 2.20s
+
+  ruby 3.3.6
+  ruby ./code.rb 40
+
+  Ruby 3.3 = 16.37s
+  ...
   ```
+2. If you want to filter down to a specific benchmark, you can run `$ bash ./run.sh fibonacci`.
+3. If you want to filter down to a particular ruby version/implementation, you can run `$ bash ./run.sh "" 3.4.0dev`.
+4. You can combine the filters to run a particular benchmark for a particular ruby using `$ bash ./run.sh fibonacci 3.4.0dev`.
 
 ### Interpretation
 
 The numbers represent the real execution time (wall-clock time) it took for each ruby version to execute the given task. **A lower number indicates better performance.**
 
-`bash ../run.sh` runs each program three times using the `runOnce` function and `awk` captures the real execution time.
+`bash ./run.sh` runs each program three times using the `runOnce` function and `awk` captures the real execution time.
 
 ## Adding
 
-To add a language:
+1. To add a new Ruby implementation, add an appropriate line to `./run.sh`. For example, to add a fictional Ruby called Ruby Roo, you would add:
 
-1. Select the benchmark directory you want to add to (EG `$ cd loops`)
-2. Create a new subdirectory for the language (EG `$ mkdir rust`)
-3. Implement the code in the appropriately named file (EG: `code.rs`)
-4. If the language is compiled, add appropriate command to `../compile.sh` and `../clean.sh`
-5. Add appropriate line to `../run.sh`
+  ```
+  "Ruby Roo|RBENV_VERSION=roo-dev|ruby"
+  ```
+2. To add a new code example, add a folder to the project with a `code.rb` file. Then update the folder declaration:
 
-You are also welcome to add new top-level benchmarks dirs
+  ```
+  declare -a folders=("fibonacci" "loop_array_each" "loop_range_each" "loop_times" "new_benchmark")
+  ```
 
 # Available Benchmarks
 

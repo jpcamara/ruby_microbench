@@ -1,0 +1,71 @@
+<html>
+
+<head>
+  <script src="./d3.v7.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  body {
+    font-family: SFMono-Regular,monospace;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+  }
+  </style>
+</head>
+
+<body>
+
+<div style="max-width: 800px; margin-left: auto; margin-right: auto;">
+<br/>
+<h1>1 Billion nested loop iterations</h1>
+<br/>
+<div id="loops"></div>
+
+<br/><br/><br/>
+<h1>Naïve Fibonacci</h1>
+<br/>
+<div id="fibonacci"></div>
+
+<br/><br/><br/>
+
+<h2>Methodology</h2>
+<p>
+Ran each three times and used the lowest timing for each.
+Timings taken on an M3 Macbook pro with 16 gb RAM using the /usr/bin/time command.
+Input value of 40 given to each.
+</p>
+<ul>
+ <li>Clang version: Apple clang version 16.0.0 (clang-1600.0.26.4)</li>
+ <li>R version: Rscript (R) version 4.4.2 (2024-10-31)</li>
+ <li>Kotlin version: kotlinc-jvm 2.0.21 (JRE 23.0.1)</li>
+ <li>Java version: javac 23.0.1</li>
+ <li>Rust version: cargo 1.82.0</li>
+ <li>Node version: v22.11.0</li>
+ <li>Python version: 3.9.6</li>
+ <li>Ruby version: 3.3.5</li>
+ <li>PHP version: 8.3.13</li>
+ <li>Dart version: 3.5.4</li>
+ <li>Bun version: 1.1.34</li>
+ <li>Deno version: 2.0.6</li>
+ <li>Go version: 1.21.2</li>
+ <li>PyPy: 7.3.17</li>
+</ul>
+
+</br>
+
+<h2>Code</h2>
+
+<p>
+You can find all of the code and the compile / run / cleanup scripts at the <a href="https://github.com/bddicken/languages">GitHub repository</a>.
+</p>
+</br></br></br></br>
+
+</div>
+
+</body>
+
+<script src="./latency_visual.js"></script>
+
+</html>

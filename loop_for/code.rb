@@ -2,10 +2,12 @@ u = ARGV[0].to_i                              # Get an input number from the com
 r = rand(10000)                               # Get a random number 0 <= r < 10k
 a = Array.new(10000, 0)                       # Array of 10k elements initialized to 0
 
-outer = (0...10000).to_a.freeze
-inner = (0...100000).to_a.freeze
-outer.to_a.each do |i|                       # 10k outer loop iterations
-  inner.to_a.each do |j|                    # 100k inner loop iterations, per outer loop iteration
+# outer = (0...10000).to_a.freeze
+# inner = (0...100000).to_a.freeze
+outer = (0...10000).freeze
+inner = (0...100000).freeze
+for i in outer                                # 10k outer loop iterations
+  for j in inner                              # 100k inner loop iterations, per outer loop iteration
     a[i] += j % u                             # Simple sum
   end
   a[i] += r                                   # Add a random value to each element in array
