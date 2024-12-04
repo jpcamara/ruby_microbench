@@ -1,8 +1,6 @@
 # Rubo Microbench
 
-This repo is forked from https://github.com/bddicken/languages, a "repo for collaboratively building small benchmarks to compare languages".
-
-I forked it as part of writing [Speeding up Ruby by rewriting C... in Ruby](https://jpcamara.com/2024/12/01/speeding-up-ruby.html). It let me experiment with different loop combinations to better understand how they would impact CRuby and YJIT.
+As part of writing [Speeding up Ruby by rewriting C... in Ruby](https://jpcamara.com/2024/12/01/speeding-up-ruby.html), I forked https://github.com/bddicken/languages, a "repo for collaboratively building small benchmarks to compare languages".. It let me experiment with different loop combinations to better understand how they would impact CRuby and YJIT.
 
 Out of curiosity, I expanded it to Ruby 3.4, 3.3 and 3.2, as well as a few other Ruby flavors (TruffleRuby, Artichoke, MRuby).
 
