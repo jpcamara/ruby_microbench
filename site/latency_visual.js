@@ -219,6 +219,109 @@ class LatencyVisual {
         );
     }
   }
+
+  const original_visual = new LatencyVisual('original_visual', 
+    [
+      {
+        label: 'C/clang -O3 (0.50s)', 
+        image: './c.png',
+        timeFor: 500000000,
+        class: 'cClangO0',
+        color: 'rgb(101, 155, 211)'
+      },
+      {
+        label: 'Rust (0.50s)',
+        image: './rust.png',
+        timeFor: 500000000,
+        class: 'rust',
+        color: 'rgb(50, 20, 10)'
+      },
+      {
+        label: 'Java (0.54s)',
+        image: './java.png',
+        timeFor: 540000000,
+        class: 'java',
+        color: 'rgb(242, 164, 67)'
+      },
+      {
+        label: 'Kotlin (0.56s)',
+        image: './kotlin.png',
+        timeFor: 560000000,
+        class: 'kotlin',
+        color: 'rgb(177, 36, 234)'
+      },
+      {
+        label: 'Go (0.80s)',
+        image: './go.png',
+        timeFor: 800000000,
+        class: 'goLang',
+        color: '#5dcef0'
+      },
+      {
+        label: 'Js/Bun (0.80s)', 
+        image: './bun.png',
+        timeFor: 800000000,
+        class: 'jsBun',
+        color: '#e3a1b6'
+      },
+      {
+        label: 'Js/Node (1.03s)',
+        image: './node.png',
+        timeFor: 1030000000,
+        class: 'jsNode',
+        color: '#27b648'
+      },
+      {
+        label: 'Js/Deno (1.06s)',
+        image: './deno.png',
+        timeFor: 1060000000,
+        class: 'jsDeno',
+        color: 'rgb(0, 0, 0)'
+      },
+      {
+        label: 'Dart (1.34s)',
+        image: './dart.png',
+        timeFor: 1340000000,
+        class: 'dart',
+        color: 'rgb(39, 185, 247)'
+      },
+      {
+        label: 'PyPy (1.53s)',
+        image: './pypy.png',
+        timeFor: 1530000000,
+        class: 'pypy',
+        color: 'rgb(193, 198, 187)'
+      },
+      {
+        label: 'PHP (9.93s)',
+        image: './php.png',
+        timeFor: 9930000000,
+        class: 'php',
+        color: 'rgb(120, 124, 180)'
+      },
+      {
+        label: 'Ruby (28.80s)',
+        image: './ruby.png',
+        timeFor: 28800000000,
+        class: 'ruby',
+        color: 'rgb(215, 48, 22)'
+      },
+      {
+        label: 'R (73.16s)',
+        image: './r.png',
+        timeFor: 73160000000,
+        class: 'r',
+        color: 'rgb(25, 103, 286)'
+      },
+      {
+        label: 'Python (74.42s)',
+        image: './python.png',
+        timeFor: 74420000000,
+        class: 'python',
+        color: 'rgb(255, 226, 94)'
+      },
+    ],
+    1, 7);
   
   const loops = new LatencyVisual('loops', 
       [
@@ -383,3 +486,35 @@ class LatencyVisual {
         }
       ],
       1, 7);
+      const smallAmount = new LatencyVisual('small_amount', 
+        [
+          {
+            label: 'Truffle 24.1 (1.18s)',
+            image: './truffleruby.png',
+            timeFor: 1180000000,
+            class: 'truffleruby241',
+            color: 'rgb(177, 36, 234)'
+          },
+          {
+            label: 'Ruby 3.4 YJIT (2.45s)',
+            image: './ruby.png',
+            timeFor: 2450000000,
+            class: 'ruby34yjit',
+            color: 'rgb(50, 20, 10)'
+          },
+          {
+            label: 'Ruby 3.3 YJIT (2.34s)',
+            image: './ruby.png',
+            timeFor: 2340000000,
+            class: 'ruby33yjit',
+            color: 'rgb(242, 164, 67)'
+          },
+          {
+            label: 'Ruby 3.2 (15.23s)',
+            image: './ruby.png',
+            timeFor: 15230000000,
+            class: 'ruby32',
+            color: 'rgb(242, 164, 67)'
+          }
+        ],
+        1, 7);

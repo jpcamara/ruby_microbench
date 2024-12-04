@@ -1,11 +1,11 @@
-u = ARGV[0].to_i                              # Get an input number from the command line
-r = rand(10000)                               # Get a random number 0 <= r < 10k
-a = Array.new(10000, 0)                       # Array of 10k elements initialized to 0
+# frozen_string_literal: true
 
-# outer = (0...10000).to_a.freeze
-# inner = (0...100000).to_a.freeze
-outer = (0...10000).freeze
-inner = (0...100000).freeze
+u = ARGV[0].to_i                              # Get an input number from the command line
+r = rand(10_000)                               # Get a random number 0 <= r < 10k
+a = Array.new(10_000, 0)                       # Array of 10k elements initialized to 0
+
+outer = (0...10_000)
+inner = (0...100_000)
 for i in outer                                # 10k outer loop iterations
   for j in inner                              # 100k inner loop iterations, per outer loop iteration
     a[i] += j % u                             # Simple sum

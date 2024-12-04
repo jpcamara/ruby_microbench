@@ -33,9 +33,9 @@ declare -a ruby_versions=(
   "Ruby 3.3 YJIT|RBENV_VERSION=3.3.6|ruby --yjit"
   "Ruby 3.2|RBENV_VERSION=3.2.5|ruby"
   "Ruby 3.2 YJIT|RBENV_VERSION=3.2.5|ruby --yjit"
-  "Ruby Artichoke|RBENV_VERSION=artichoke-dev|ruby"
   "TruffleRuby 24.1|RBENV_VERSION=truffleruby-24.1.1|ruby"
-  "JRuby 9.4.9|RBENV_VERSION=jruby-9.4.9.0|ruby"
+  # "JRuby 9.4.9|RBENV_VERSION=jruby-9.4.9.0|ruby -Xcompile.invokedynamic=true"
+  "Ruby Artichoke|RBENV_VERSION=artichoke-dev|ruby"
   "MRuby|RBENV_VERSION=mruby-3.3.0|ruby"
   # "NatalieRuby|NONE|natalie"
 )
