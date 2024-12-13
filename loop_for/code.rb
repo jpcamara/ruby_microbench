@@ -4,8 +4,8 @@ u = ARGV[0].to_i                              # Get an input number from the com
 r = rand(10_000)                               # Get a random number 0 <= r < 10k
 a = Array.new(10_000, 0)                       # Array of 10k elements initialized to 0
 
-outer = (0...10_000)
-inner = (0...100_000)
+outer = (0...10_000).to_a.freeze
+inner = (0...100_000).to_a.freeze
 for i in outer                                # 10k outer loop iterations
   for j in inner                              # 100k inner loop iterations, per outer loop iteration
     a[i] += j % u                             # Simple sum
